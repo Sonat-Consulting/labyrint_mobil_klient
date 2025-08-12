@@ -22,3 +22,4 @@
 1. Implementer mobilklient med knapper
 2. Implementer mobilklient med gyroskop og laser for å skyte andre
 3. Implementer mobilklient med kompass
+
