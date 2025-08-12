@@ -21,7 +21,7 @@
 
 1. Implementer mobilklient med knapper og evt. laser for å skyte andre
 2. Implementer mobilklient med gyroskop og evt. laser for å skyte andre
-3. Implementer mobilklient med kompass og evt. laser for å skyte andre
+3. Implementer mobilklient med kompass og pedometer og evt. laser for å skyte andre
 
 ## Hvordan spille
 1. Åpne Admin klient for å opprette nytt spill (https://icy-coast-07e70d403.6.azurestaticapps.net)
