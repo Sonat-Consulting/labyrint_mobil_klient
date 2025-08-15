@@ -62,5 +62,4 @@ emulator -avd myEmulator
 
 ## 3: Launch test app
 
-last ned labyrint_mobil_klient <TODO sett inn url her>
-og kjør `flutter run´ fra rotmappen
+run `flutter clean` and `flutter run` from root folder

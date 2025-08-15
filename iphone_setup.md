@@ -19,9 +19,25 @@
   export PATH="$PATH:/path/to/flutter/bin"
 ```
 
-TODO FÅ LIV I Xcode og emulator
+## 2: Install Xcode
 
-## 3: Launch test app
+- `https://developer.apple.com/documentation/safari-developer-tools/installing-xcode-and-simulators``
+- install at least one ios simulator
 
-last ned labyrint_mobil_klient <TODO sett inn url her>
-og kjør `flutter run´ fra rotmappen
+## 3: Launch app
+
+- run `flutter clean` and `flutter build ios` from root folder
+- run `open ios/Runner.xcworkspace`
+
+### 1: Set up developer account (if you don't have an developer account)
+
+- in Xcode go to `Runner` at top level in navigator
+- open `Signing & Capabilities` and choose `Add an account...`
+- Sign in with your Apple ID
+- Click `Manage Certificate...`
+- Click the `+` button in bottom left corner and `Apple development`
+- Go back to main Xcode window and in `Team` select your newly created account
+
+### 3: Launch the app in emulator
+
+- Launch the app from Xcode at the play button
