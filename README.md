@@ -11,6 +11,15 @@
 - flutter build apk
 - kopier fil til telefon / installer ved å klikke på apk filen
 
+## Kopier app til android telefon
+
+- Aktivere utviklerinnstillinger:
+  - Innstillinger → Om telefonen → Programvareinformasjon → Klikk 7-10 ganger på Build-nummer
+- Koble telefonen til PC
+- Godkjenn tilgang til telefondata (popup på telefon)
+- Finn filen på android telefon → dobbeltklikk → gi tillatelse
+- Takk nei til sikkerhetssjekk
+
 ## Build ios
 
 - flutter clean
@@ -24,6 +33,7 @@
 3. Implementer mobilklient med kompass og pedometer og evt. laser for å skyte andre
 
 ## Hvordan spille
+
 1. Åpne Admin klient for å opprette nytt spill (https://icy-coast-07e70d403.6.azurestaticapps.net)
 2. Se at header endrer til grønn farge og Game Id blir satt
 3. Åpne mobilklient og angi Game Id og brukernavn
@@ -32,23 +42,27 @@
 ## Meldinger som kan sendes fra mobilklient
 
 ### Bevege robot
+
 ```
 {
   Action: "MovePlayer",
   GameId: {gameId},
   ClientId: {clientId},
   Direction: "North" or "South" or "West" or "East",
-}                    
+}
 ```
+
 **Direction:** Skal ha verdien "North", "South", "West" eller "East"
 
 ### Skyte laser
+
 ```
 {
   Action: "ShootLazer",
   GameId: {gameId},
   ClientId: {clientId},
   Direction: "North" or "South" or "West" or "East",
-}                    
+}
 ```
+
 **Direction:** Skal ha verdien "North", "South", "West" eller "East"

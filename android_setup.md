@@ -63,12 +63,3 @@ emulator -avd myEmulator
 ## 3: Launch test app
 
 run `flutter clean` and `flutter run` from root folder
-
-## 4: Kopier app til telefon
-
-- Aktivere utviklerinnstillinger:
-  - Innstillinger → Om telefonen → Programvareinformasjon → Klikk 7-10 ganger på Build-nummer
-- Koble telefonen til PC
-- Godkjenn tilgang til telefondata (popup på telefon)
-- Finn filen på android telefon → dobbeltklikk → gi tillatelse
-- Takk nei til sikkerhetssjekk
