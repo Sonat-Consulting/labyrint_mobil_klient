@@ -6,19 +6,20 @@ import 'package:web_socket_channel/web_socket_channel.dart';
 
 import 'model/game-action.dart';
 
-class Game extends StatefulWidget {
-  final WebSocketChannel channel;
+import 'globals.dart' as globals;
 
-  const Game({super.key, required this.id, required this.channel});
+class Game extends StatefulWidget {
+  const Game({super.key, required this.id, required this.username});
 
   final String id;
+  final String username;
 
   @override
   State<Game> createState() => _GameState();
 }
 
 class _GameState extends State<Game> {
-  String clientId = "";
+  late WebSocketChannel channel;
 
   @override
   Widget build(BuildContext context) {
@@ -58,16 +59,16 @@ class _GameState extends State<Game> {
     var action = GameAction(
       action: "MovePlayer",
       gameId: gameId,
-      clientId: clientId,
+      clientId: globals.clientId,
       direction: direction,
     );
     print('Sending action: $action');
-    widget.channel.sink.add(jsonEncode(action));
+    channel.sink.add(jsonEncode(action));
   }
 
   @override
   void dispose() {
-    widget.channel.sink.close();
+    channel.sink.close();
     super.dispose();
   }
 
@@ -75,13 +76,24 @@ class _GameState extends State<Game> {
   void initState() {
     super.initState();
 
-    widget.channel.stream.listen(
+    print('Initializing game...');
+    print('ClientId: ${globals.clientId}');
+    print('Username: ${widget.username}');
+    print('GameId: ${widget.id}');
+
+    channel = WebSocketChannel.connect(
+      Uri.parse(
+        'wss://mazeserverwebapp-apd7asc7aqcdasbv.norwayeast-01.azurewebsites.net/api/Maze/MazePlayer?username=${widget.username}&gameId=${widget.id}&id=${globals.clientId}',
+      ),
+    );
+
+    channel.stream.listen(
       (message) {
         print('Message Received: $message');
         final jsonMessage = jsonDecode(message);
         if (jsonMessage['Action'] == 'ClientRegistered') {
-          clientId = jsonMessage['ClientId'];
-          print('ClientId: $clientId');
+          globals.clientId = jsonMessage['ClientId'];
+          print('ClientId: ${globals.clientId}');
         }
       },
       onError: (error) {
