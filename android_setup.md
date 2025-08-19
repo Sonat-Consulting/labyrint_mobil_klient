@@ -26,7 +26,11 @@
   export PATH="$PATH:/path/to/flutter/bin"
 ```
 
-## Step 2: Android SDK and emulator
+## Step 2: Download and install JDK 23
+
+- https://www.oracle.com/java/technologies/javase/jdk23-archive-downloads.html
+
+## Step 3: Android SDK and emulator
 
 ### 1: Download Command Line Tools
 
@@ -60,6 +64,6 @@ avdmanager create avd -n myEmulator -k "system-images;android-33;google_apis;x86
 
 emulator -avd myEmulator
 
-## 3: Launch test app
+## 4: Launch test app
 
 run `flutter clean` and `flutter run` from root folder
