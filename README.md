@@ -64,5 +64,14 @@
   Direction: "North" or "South" or "West" or "East",
 }
 ```
-
 **Direction:** Skal ha verdien "North", "South", "West" eller "East"
+
+## Spillregler
+- 2 laser skudd per brett
+- Blir man truffet, returnerer man til start
+- Det blir gitt handicap ut fra løsning (voltestart)
+  - Styre med knapper + x sekund
+  - Styre med gyroskop + y sekund
+  - Styre med kompass + z sekund
+  - Alternative kreative løsninger (stemmestyring, kamera osv)
+- Turnering der de 2 beste fra hver gruppe går til finale
