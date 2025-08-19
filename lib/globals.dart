@@ -1,1 +1,2 @@
 String clientId = '';
+String gameId = '';

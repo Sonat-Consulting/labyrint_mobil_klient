@@ -81,9 +81,12 @@ class _GameState extends State<Game> {
     print('Username: ${widget.username}');
     print('GameId: ${widget.id}');
 
+    var cId = globals.gameId == widget.id ? globals.clientId : '';
+    globals.gameId = widget.id;
+
     channel = WebSocketChannel.connect(
       Uri.parse(
-        'wss://mazeserverwebapp-apd7asc7aqcdasbv.norwayeast-01.azurewebsites.net/api/Maze/MazePlayer?username=${widget.username}&gameId=${widget.id}&id=${globals.clientId}',
+        'wss://mazeserverwebapp-apd7asc7aqcdasbv.norwayeast-01.azurewebsites.net/api/Maze/MazePlayer?username=${widget.username}&gameId=${widget.id}&id=$cId',
       ),
     );
 
