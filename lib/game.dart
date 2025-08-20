@@ -40,13 +40,15 @@ class _GameState extends State<Game> {
             ElevatedButton(
               child: const Text('Gyro'),
               onPressed: () {
-                print('Spill med knapper');
+                print('Spill med gyro');
+                // sensor_plus biblioteket kan brukes til å få tilgang til gyroskopdata
               },
             ),
             ElevatedButton(
               child: const Text('Kompass'),
               onPressed: () {
                 print('Spill med Kompass');
+                // sensor_plus biblioteket kan brukes til å få tilgang til kompassdata
               },
             ),
           ],

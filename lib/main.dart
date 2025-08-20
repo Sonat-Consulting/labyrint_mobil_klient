@@ -19,17 +19,12 @@ class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 }
 
-// Define a corresponding State class.
-// This class holds the data related to the Form.
 class _HomeScreenFormState extends State<HomeScreen> {
-  // Create a text controller and use it to retrieve the current value
-  // of the TextField.
   final gameIdController = TextEditingController();
   final usernameController = TextEditingController();
 
   @override
   void dispose() {
-    // Clean up the controller when the widget is disposed.
     gameIdController.dispose();
     usernameController.dispose();
     super.dispose();
@@ -64,14 +59,6 @@ class _HomeScreenFormState extends State<HomeScreen> {
               ElevatedButton(
                 child: const Text('Start spill'),
                 onPressed: () {
-                  // final channel = SocketChannel(
-                  //   () => WebSocketChannel.connect(
-                  //     Uri.parse(
-                  //       'wss://mazeserverwebapp-apd7asc7aqcdasbv.norwayeast-01.azurewebsites.net/api/Maze/MazePlayer?username=${usernameController.text}&gameId=${gameIdController.text}',
-                  //     ),
-                  //   ),
-                  // );
-
                   Navigator.push(
                     context,
                     MaterialPageRoute(
