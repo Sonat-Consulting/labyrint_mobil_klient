@@ -26,6 +26,10 @@
 - flutter build ios
 - open ios/Runner.xcworkspace
 
+## kopier app til ios enhet
+
+- start app fra xcode og velge ios enhet som er koblet til mac
+
 ## Oppgaver
 
 1. Implementer mobilklient med knapper og evt. laser for å skyte andre
@@ -64,9 +68,11 @@
   Direction: "North" or "South" or "West" or "East",
 }
 ```
+
 **Direction:** Skal ha verdien "North", "South", "West" eller "East"
 
 ## Spillregler
+
 - 2 laser skudd per brett
 - Blir man truffet, returnerer man til start
 - Det blir gitt handicap ut fra løsning (voltestart)
