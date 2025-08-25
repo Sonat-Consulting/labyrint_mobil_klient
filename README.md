@@ -31,6 +31,7 @@
 1. Implementer mobilklient med knapper og evt. laser for å skyte andre
 2. Implementer mobilklient med gyroskop og evt. laser for å skyte andre
 3. Implementer mobilklient med kompass og pedometer og evt. laser for å skyte andre
+4. Implementer din egen kreative løsning for å styre roboten (stemmestyring, kamera, osv...)
 
 ## Hvordan spille
 
