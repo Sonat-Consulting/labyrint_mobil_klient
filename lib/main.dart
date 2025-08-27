@@ -37,42 +37,41 @@ class _HomeScreenFormState extends State<HomeScreen> {
       appBar: AppBar(title: const Text('Start spill')),
       body: Container(
         margin: const EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
-        child: Container(
-          child: Column(
-            children: [
-              TextField(
-                controller: gameIdController,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'id',
-                ),
+
+        child: Column(
+          children: [
+            TextField(
+              controller: gameIdController,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'id',
               ),
-              const Padding(padding: EdgeInsets.symmetric(vertical: 8.0)),
-              TextField(
-                controller: usernameController,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'Brukernavn',
-                ),
+            ),
+            const Padding(padding: EdgeInsets.symmetric(vertical: 8.0)),
+            TextField(
+              controller: usernameController,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: 'Brukernavn',
               ),
-              const Padding(padding: EdgeInsets.symmetric(vertical: 8.0)),
-              ElevatedButton(
-                child: const Text('Start spill'),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder:
-                          (context) => Game(
-                            id: gameIdController.text,
-                            username: usernameController.text,
-                          ),
-                    ),
-                  );
-                },
-              ),
-            ],
-          ),
+            ),
+            const Padding(padding: EdgeInsets.symmetric(vertical: 8.0)),
+            ElevatedButton(
+              child: const Text('Start spill'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder:
+                        (context) => Game(
+                          id: gameIdController.text,
+                          username: usernameController.text,
+                        ),
+                  ),
+                );
+              },
+            ),
+          ],
         ),
       ),
     );
