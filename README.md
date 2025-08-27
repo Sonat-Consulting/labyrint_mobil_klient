@@ -37,6 +37,9 @@
 3. Implementer mobilklient med kompass og pedometer og evt. laser for å skyte andre
 4. Implementer din egen kreative løsning for å styre roboten (stemmestyring, kamera, osv...)
 
+## Tips
+Spillserver aksepterer meldinger fra samme spiller hvert 40ms. Best ytelse oppnås med å treffe nærmest mulig dette.
+
 ## Hvordan spille
 
 1. Åpne Admin klient for å opprette nytt spill (https://icy-coast-07e70d403.6.azurestaticapps.net)
