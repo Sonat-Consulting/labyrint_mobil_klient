@@ -21,12 +21,13 @@
 
 ## 2: Install Xcode
 
-- `https://developer.apple.com/documentation/safari-developer-tools/installing-xcode-and-simulators``
+- https://developer.apple.com/documentation/safari-developer-tools/installing-xcode-and-simulators
 - install at least one ios simulator
 
 ## 3: Launch app
 
 - run `flutter clean` and `flutter build ios` from root folder
+- Issues? Run `flutter doctor`, which may tell you any additional steps you need to take
 - run `open ios/Runner.xcworkspace`
 
 ### 1: Set up developer account (if you don't have an developer account)
