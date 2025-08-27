@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:labyrint_mobil_klient/buttons.dart';
 import 'package:labyrint_mobil_klient/model/direction.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 
@@ -34,7 +35,20 @@ class _GameState extends State<Game> {
             ElevatedButton(
               child: const Text('Knapper'),
               onPressed: () {
-                print('Spill med knapper');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder:
+                        (context) => Buttons(
+                          go: (steps, direction) {
+                            _sendGameAction(widget.id, "MovePlayer", direction);
+                          },
+                          shoot: (direction) {
+                            _sendGameAction(widget.id, "ShootLazer", direction);
+                          },
+                        ),
+                  ),
+                );
               },
             ),
             ElevatedButton(
@@ -57,9 +71,9 @@ class _GameState extends State<Game> {
     );
   }
 
-  void _sendGameAction(String gameId, Direction direction) {
+  void _sendGameAction(String gameId, String actionType, Direction direction) {
     var action = GameAction(
-      action: "MovePlayer",
+      action: actionType,
       gameId: gameId,
       clientId: globals.clientId,
       direction: direction,
