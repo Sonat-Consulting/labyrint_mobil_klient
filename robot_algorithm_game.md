@@ -1,5 +1,5 @@
 ## Maze admin klient ##
-https://icy-coast-07e70d403.6.azurestaticapps.net/
+https://icy-coast-07e70d403.6.azurestaticapps.net?notifyPlayer=true
 
 ### Spillet foregår som følger ###
 1. Åpne Admin klient for å oppretter nytt spill med gameId
