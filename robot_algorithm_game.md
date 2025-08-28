@@ -82,4 +82,7 @@ Man svarer på en "NextMove" melding med en "MovePlayer" melding:
 }
 ```
 
+### VIKTIG
+Server aksepterer ikke meldinger raskere enn 40ms. Dersom man sender meldinger tettere enn 40ms, vil meldingen bli forkastet og man mottar ikke ny info om flytt.
+
 
